@@ -6,7 +6,6 @@ const multiplyValue = (value: number, multiplier?: number): number => {
   }
 };
 
-// * Problem 2: Done
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
@@ -17,14 +16,12 @@ const processInput = (value: string | number | boolean): string | number => {
   } else return "Inactive";
 };
 
-// * Problem 3: Done
 type Coordinate = readonly [number, number, string];
 
 const formatCoordinate = (coordinate: Coordinate): string => {
   return `Location: ${coordinate[2]} (${coordinate[0]}, ${coordinate[1]})`;
 };
 
-// * Problem 4: Done
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   const result: T[] = [];
 
@@ -35,7 +32,6 @@ const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return result;
 };
 
-// * Problem 5: Done
 interface Course {
   title: string;
   students: number;
@@ -51,12 +47,10 @@ const getPopularCourses = (
   );
 };
 
-// * Problem 6: Done
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
   return items.map((item) => item[key]);
 };
 
-// * Problem 7: Done
 class Employee {
   constructor(
     protected name: string,
@@ -82,7 +76,6 @@ class Manager extends Employee {
   }
 }
 
-// * Problem 8:
 const validateAgeAsync = async (age: number): Promise<string> => {
   if (age < 18) {
     throw new Error("Access Denied: Must be 18 or older");
